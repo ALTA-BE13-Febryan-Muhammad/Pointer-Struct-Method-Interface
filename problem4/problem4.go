@@ -5,7 +5,7 @@ import "fmt"
 type student struct {
 	name       string
 	nameEncode string
-	score      int
+	// score      int
 }
 
 type Chiper interface {
@@ -15,13 +15,31 @@ type Chiper interface {
 
 func (s *student) Encode() string {
 	var nameEncode = ""
-	// your code here
+	// your code hereee
+	for _, karakter := range s.name {
+		if karakter >= 97 && karakter <= 122 {
+			karakter += 3
+			if karakter > 122 {
+				karakter -= 26
+			}
+		}
+		nameEncode += string(karakter)
+	}
 	return nameEncode
 }
 
 func (s *student) Decode() string {
 	var nameDecode = ""
-	// your code here
+	// your code hereee
+	for _, karakter := range s.name {
+		if karakter >= 97 && karakter <= 122 {
+			karakter -= 3
+			if karakter < 97 {
+				karakter -= 26
+			}
+		}
+		nameDecode += string(karakter)
+	}
 	return nameDecode
 }
 

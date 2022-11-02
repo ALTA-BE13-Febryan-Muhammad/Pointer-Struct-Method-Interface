@@ -18,10 +18,15 @@ func Swap(a, b *int) (int, int) {
 	// *b = wadahA
 	// return wadahA, wadahB
 
-	//very short
-	*a, *b = *b, *a
+	// very short
+	*a, *b = *b, *a // << ini
 	return *a, *b
 
+	//very short 2
+	// wadahC := *a
+	// *a = *b
+	// *b = wadahC
+	// return *a, *b
 }
 
 func main() {
@@ -30,6 +35,7 @@ func main() {
 
 	Swap(&a, &b)
 	fmt.Println(a, b)
+
 }
 
 //status * itu di negate dengan &

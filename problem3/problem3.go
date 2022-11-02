@@ -8,15 +8,15 @@ type Student struct {
 }
 
 func (s Student) Average() float64 {
-	// your code here
+	// your code heree
 }
 
 func (s Student) Min() (min int, name string) {
-	// your code here
+	// your code heree
 }
 
 func (s Student) Max() (max int, name string) {
-	// your code here
+	// your code heree
 }
 
 func main() {

@@ -6,6 +6,19 @@ import (
 
 func GetMinMax(numbers ...*int) (min int, max int) {
 	// your code here
+
+	min = *numbers[0]
+	max = *numbers[0]
+	for _, value := range numbers {
+		if *value < min {
+			min = *value
+		}
+		if *value > max {
+			max = *value
+		}
+	}
+	return min, max
+
 }
 
 func main() {
